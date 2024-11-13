@@ -68,9 +68,12 @@ export default function App() {
 
   return (
     <div className="App">
+    <div className="search-container">
       <Form moviesearch={getMovie} />
-      <MovieDisplay movie={movie} />
     </div>
+    <MovieDisplay movie={movie} />
+  </div>
+  
   );
 }
 

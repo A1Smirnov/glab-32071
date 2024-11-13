@@ -1,6 +1,8 @@
 // ./src/components/Form.js
 
 import { useState } from "react";
+import './Form.css';
+
 
 export default function Form({ moviesearch }) {
   // State to track Form
