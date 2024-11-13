@@ -24,6 +24,7 @@ Thumbs.db
 
 # Environment variables - files that store environment-specific settings like local development or production configurations
 # These files should not be tracked as they often contain sensitive information (e.g., API keys)
+.env
 .env.local
 .env.development.local
 .env.test.local
