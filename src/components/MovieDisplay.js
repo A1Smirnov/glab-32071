@@ -1,17 +1,26 @@
 // ./src/components/MovieDisplay.js
 
 export default function MovieDisplay({ movie }) {
-    const loaded = () => (
-      <>
+    if (!movie) {
+      return <p>Loading...</p>;
+    }
+  
+    return (
+      <div className="movie-display">
         <h1>{movie.Title}</h1>
-        <h2>{movie.Genre}</h2>
         <img src={movie.Poster} alt={movie.Title} />
-        <h2>{movie.Year}</h2>
-      </>
+        <p><strong>Year:</strong> {movie.Year}</p>
+        <p><strong>Rated:</strong> {movie.Rated}</p>
+        <p><strong>Released:</strong> {movie.Released}</p>
+        <p><strong>Genre:</strong> {movie.Genre}</p>
+        <p><strong>Director:</strong> {movie.Director}</p>
+        <p><strong>Writer:</strong> {movie.Writer}</p>
+        <p><strong>Actors:</strong> {movie.Actors}</p>
+        <p><strong>Plot:</strong> {movie.Plot}</p>
+        <p><strong>Language:</strong> {movie.Language}</p>
+        <p><strong>Country:</strong> {movie.Country}</p>
+        <p><strong>Awards:</strong> {movie.Awards}</p>
+      </div>
     );
-  
-    const loading = () => <h1>No Movie to Display</h1>;
-  
-    return movie ? loaded() : loading();
   }
   
